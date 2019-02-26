@@ -27,6 +27,7 @@
         "core-js": "2.5.7",
         "fullcalendar": "4.0.0-alpha.2",
         "intl": "1.2.5",
+        "primeflex": "^1.0.0-rc.1",
         "primeng": "7.0.0",
         "quill": "1.1.8",
         "rxjs": "6.3.3",

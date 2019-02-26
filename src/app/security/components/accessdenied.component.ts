@@ -11,4 +11,8 @@ export class AccessDeniedComponent {
         private router: Router,
         private authenticationService: AuthenticationService
     ) {}
+
+    goToHome() {
+        this.router.navigate(['/']);
+    }
 }

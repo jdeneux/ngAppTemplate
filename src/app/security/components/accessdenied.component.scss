@@ -1,3 +1,6 @@
+@import '../../../assets/sass/variables';
+@import '../../../assets/sass/mixins';
+
 .exception-body {
     background-color: #f5f5f5;
     padding-top: 200px;
@@ -62,7 +65,7 @@
     }
 
     &.error-body {
-        background: url("../images/exception/error-image.png") no-repeat 0 -100px;
+        background: url("/assets/images/exception/error-image.png") no-repeat 0 -100px;
         .exception-panel {
             img {
                 width: 100%;
@@ -88,7 +91,7 @@
     }
 
     &.pagenotfound-body {
-        background: url("../images/exception/404-image.png") no-repeat 0 -100px;
+        background: url("/assets/images/exception/404-image.png") no-repeat 0 -100px;
 
         .exception-panel {
             img {
@@ -120,7 +123,7 @@
     }
 
     &.accessdenied-body {
-        background: url("assets/layout/images/exception/access-image.png") no-repeat 0 -100px;
+        background: url("/assets/layout/images/exception/access-image.png") no-repeat 0 -100px;
 
         .exception-panel {
             img {

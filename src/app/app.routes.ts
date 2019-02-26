@@ -19,6 +19,7 @@ import {UtilsDemoComponent} from './demo/view/utilsdemo.component';
 import {DocumentationComponent} from './demo/view/documentation.component';
 
 import {UsersComponent, LoginComponent} from '@/security';
+import { AccessDeniedComponent } from './security/components/accessdenied.component';
 
 export const routes: Routes = [
     {path: '', component: DashboardDemoComponent, canActivate: [AuthGuard]},
@@ -36,7 +37,8 @@ export const routes: Routes = [
     {path: 'utils', component: UtilsDemoComponent, canActivate: [AuthGuard]},
     {path: 'documentation', component: DocumentationComponent, canActivate: [AuthGuard]},
     {path: 'users', component: UsersComponent, canActivate: [AuthGuard], data: { allowedRoles: ['Admin', 'User']}},
-    {path: 'login', component: LoginComponent}
+    {path: 'login', component: LoginComponent},
+    {path: 'accessdenied', component: AccessDeniedComponent}
 ];
 
 export const AppRoutes: ModuleWithProviders = RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'});

@@ -2,8 +2,6 @@
     background-color: #f5f5f5;
     padding-top: 200px;
     height: auto;
-    background: url("../../../assets/layout/images/login/login-image.png") no-repeat;
-    background-position: 0 -100px;
         
     .login-panel {
         background-color: #ffffff;
@@ -36,13 +34,15 @@
                 right: 30px;
             }
             
-            &.ui-g-12 {
+            &.p-col-12 {
                 padding: 20px 30px;
+                flex: initial;
             }
         }
         
-        .ui-g-12 {
+        .p-col-12 {
             padding: 20px 70px;
+            flex: initial;
         }
     }
 }
@@ -60,8 +60,9 @@
         .login-panel {
             width: 300px;
             
-            .ui-g-12 {
+            .p-col-12 {
                 padding: 20px 35px;
+                flex: none;
             }
         }
     }

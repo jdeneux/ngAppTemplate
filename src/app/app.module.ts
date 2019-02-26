@@ -106,7 +106,7 @@ import { fakeBackendProvider } from './_helpers';
 
 import { JwtInterceptor, ErrorInterceptor } from '@/_helpers';
 
-import {LoginComponent, UsersComponent} from './security';
+import { LoginComponent, UsersComponent, AccessDeniedComponent } from './security';
 
 import { User } from '@/_models';
 
@@ -222,7 +222,8 @@ import { User } from '@/_models';
         UtilsDemoComponent,
         DocumentationComponent,
         LoginComponent,
-        UsersComponent
+        UsersComponent,
+        AccessDeniedComponent
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
