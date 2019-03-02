@@ -1,33 +1,36 @@
 <div class="login-body">
-
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div class="login-panel ui-fluid">
-            <div class="p-grid p-nogutter">
-                <div class="p-col-12 login-header">
-                    <h1>LOGIN</h1>
-                    <h2>Welcome to Dashboard</h2>
-                    <!--<img src="assets/layout/images/logo.png">-->
+    <div class="login-panel ui-fluid">
+        <p-dialog [(visible)]="display" [modal]="true" [closeOnEscape]="false" [closable]="false">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="p-grid p-nogutter">
+                    <div class="p-col-12 login-header">
+                        <h1>LOGIN</h1>
+                        <h2>Welcome to Dashboard</h2>
+                        <!--<img src="assets/layout/images/logo.png">-->
+                    </div>
+                    <div class="p-col-12">
+                        <span class="md-inputfield">
+                            <input formControlName="username" type="text" autocomplete="off" class="ui-inputtext ui-corner-all ui-state-default ui-widget"
+                                [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                            <label for="username">Username</label>
+                        </span>
+                    </div>
+                    <div class="p-col-12">
+                        <span class="md-inputfield">
+                            <input formControlName="password" type="password" autocomplete="off" class="ui-inputtext ui-corner-all ui-state-default ui-widget"
+                                [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                            <label for="password">Password</label>
+                        </span>
+                    </div>
+                    <div class="p-col-12 button-container">
+                        <button type="submit" [disabled]="loading" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left">
+                            <span class="ui-button-icon-left ui-c fa fa-fw ui-icon-person"></span>
+                            <span class="ui-button-text ui-c">Sign In</span>
+                        </button>
+                    </div>
+                    <div *ngIf="error" class="form-group p-col-12 ui-messages ui-messages-error">{{error}}</div>
                 </div>
-                <div class="p-col-12">
-                    <span class="md-inputfield">
-                        <input formControlName="username" type="text" autocomplete="off" class="ui-inputtext ui-corner-all ui-state-default ui-widget" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
-                        <label for="username">Username</label>
-                    </span>
-                </div>
-                <div class="p-col-12">
-                    <span class="md-inputfield">
-                        <input formControlName="password" type="password" autocomplete="off" class="ui-inputtext ui-corner-all ui-state-default ui-widget" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
-                        <label for="password">Password</label>
-                    </span>
-                </div>
-                <div class="p-col-12 button-container">
-                    <button type="submit" [disabled]="loading" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left">
-                        <span class="ui-button-icon-left ui-c fa fa-fw ui-icon-person"></span>
-                        <span class="ui-button-text ui-c">Sign In</span>
-                    </button>
-                </div>
-                <div *ngIf="error" class="form-group p-col-12 ui-messages ui-messages-error">{{error}}</div>
-            </div>
-        </div>
-    </form>
+            </form>
+        </p-dialog>
+    </div>
 </div>
